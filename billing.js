@@ -80,7 +80,7 @@ function billCalc() {
     addItem.innerHTML = itemf;
     addQty.innerHTML = qtyf;
 
-    addPrice.innerHTML = "₹ " + pricef;
+    addPrice.innerHTML = "₹" + pricef;
 
     if (auf === "Kg" || auf === "No") {
         addAmount.innerHTML = (pricef * qtyf).toFixed(2);
