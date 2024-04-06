@@ -73,7 +73,24 @@ function billCalc() {
     item.value = "";
     price.value = "";
     qty.value = "";
+    billTable.addEventListener("click", (event) => {
+        // console.log(event.target.innerHTML);
 
+        if (event.target.innerHTML === 'delete') {
+            event.target.parentElement.parentElement.remove();
+            var totalAmtf = 0;
+
+            for (i = 0; i < row.length; i++) {
+                var rowl = billTable.rows[i];
+                var lastCell = rowl.cells[rowl.cells.length - 2];
+                var lastCellData = parseFloat(lastCell.textContent);
+                totalAmtf = totalAmtf + lastCellData;
+            }
+
+            totalAmt.textContent = totalAmtf.toFixed(2);
+        }
+
+    });
 
 }
 
@@ -81,14 +98,7 @@ function billCalc() {
 addItem.addEventListener("click", billCalc);
 
 //remove the row
-billTable.addEventListener("click", (event) => {
-    // console.log(event.target.innerHTML);
 
-    if (event.target.innerHTML === 'delete') {
-        event.target.parentElement.parentElement.remove();
-    }
-
-});
 
 // to download the bill
 document.getElementById('downloadBill').addEventListener('click', function() {
