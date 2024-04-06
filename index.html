@@ -55,6 +55,41 @@
                     <button id="add-item">Add Item</button>
                 </div>
             </div>
+
+            <div id="gramFinder">
+                <h2>Find Grams</h2>
+                <div id="gram-cards-cont">
+                    <div class="gram-card">
+                        <label for="itemforGrams">Item</label>
+                        <select name="item" id="itemforGrams">
+                    <option class="itemOption" value="">Select Item</option>
+                    <option class="itemOption" value="Rasgulla">Rasgulla</option>
+                    <option class="itemOption" value="Gulabjamun">Gulabjamun</option>
+                    <option class="itemOption" value="Cham Cham">Cham Cham</option>
+                    <option class="itemOption" value="Patisa">Patisa</option>
+                    <option class="itemOption" value="Kalakand">Kalakand</option>
+                    <option class="itemOption" value="Samosa">Samosa</option>
+                    <option class="itemOption" value="Burger">Burger</option>
+                    <option class="itemOption" value="Bread Pakoda">Bread Pakoda</option>
+                    </select>
+                    </div>
+                    <div class="gram-card">
+                        <label for="priceforGrams">Price ₹</label>
+                        <input type="number" id="priceforGrams" readonly>
+                    </div>
+                    <div class="gram-card">
+                        <label for="askingAmount">Asking Amount ₹</label>
+                        <input type="number" id="askingAmount">
+                    </div>
+                    <div class="gram-card">
+                        <label for="grams">Grams</label>
+                        <input type="number" id="grams" readonly>
+                    </div>
+                </div>
+                <div class="gram-card" id="gramBtn">
+                    <button id="findGram">Find Grams</button>
+                </div>
+            </div>
         </div>
 
         <!-- output -->
@@ -62,6 +97,10 @@
             <div id="output">
                 <div class="billcard" id="billcardId">
                     <h2>Final Bill</h2>
+                    <div id="billDatecard">
+                        <p id="billDate"></p>
+                        <p id="billTime"></p>
+                    </div>
                     <table id="bill">
                         <thead>
                             <th id="final-item">Item</th>

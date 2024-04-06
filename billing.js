@@ -4,15 +4,30 @@ var qty = document.querySelector("#qty");
 var au = document.querySelector("#au");
 const addItem = document.querySelector("#add-item");
 const addNewBIll = document.querySelector("#add-new-bill");
+const billDate = document.querySelector("#billDate");
+const billTime = document.querySelector("#billTime");
+var itemforGrams = document.querySelector("#itemforGrams");
+var priceforGrams = document.querySelector("#priceforGrams");
+var grams = document.querySelector("#grams");
+var findGram = document.querySelector("#findGram");
+var askingAmount = document.querySelector("#askingAmount");
+
 
 var billTable = document.getElementById("bill").getElementsByTagName('tbody')[0];
 var totalAmt = document.getElementById("totalAmt");
+
+// getting the date
+
 
 function billCalc() {
     var itemf = item.value;
     var pricef = price.value;
     var qtyf = qty.value;
     var auf = au.value;
+
+    var date = new Date();
+    billDate.innerHTML = date.toDateString();
+    billTime.innerHTML = date.toLocaleTimeString()
 
     if (!itemf) {
         alert("Item is not added.!")
@@ -67,12 +82,10 @@ function billCalc() {
 
     addPrice.innerHTML = "₹ " + pricef;
 
-    if (auf === "Kg") {
+    if (auf === "Kg" || auf === "No") {
         addAmount.innerHTML = (pricef * qtyf).toFixed(2);
     } else if (auf === "gm") {
         addAmount.innerHTML = (pricef * (qtyf / 1000)).toFixed(2);
-    } else if (auf === "No") {
-        addAmount.innerHTML = (pricef * qtyf).toFixed(2);
     }
 
     addAU.innerHTML = auf;
@@ -141,6 +154,8 @@ document.getElementById('downloadBill').addEventListener('click', function() {
 });
 
 // adding price dinamically when the value of item changes
+
+
 item.addEventListener("change", (event) => {
     var priceKey = event.target.value;
     switch (priceKey) {
@@ -173,3 +188,41 @@ item.addEventListener("change", (event) => {
             break;
     }
 });
+
+itemforGrams.addEventListener("change", (event) => {
+    var priceKey2 = event.target.value;
+    switch (priceKey2) {
+        case "Rasgulla":
+            priceforGrams.value = "200";
+            break;
+        case "Gulabjamun":
+            priceforGrams.value = "220";
+            break;
+        case "Cham Cham":
+            priceforGrams.value = "350";
+            break;
+        case "Patisa":
+            priceforGrams.value = "430";
+            break;
+        case "Kalakand":
+            priceforGrams.value = "620";
+            break;
+        case "Samosa":
+            priceforGrams.value = "10";
+            break;
+        case "Burger":
+            priceforGrams.value = "15";
+            break;
+        case "Bread Pakoda":
+            priceforGrams.value = "20";
+            break;
+        default:
+            0;
+            break;
+    }
+});
+
+findGram.addEventListener("click", () => {
+    var finalGrams = (1000 / priceforGrams.value) * askingAmount.value;
+    grams.value = finalGrams.toFixed(2);
+})
