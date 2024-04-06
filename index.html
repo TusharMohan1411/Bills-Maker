@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="billing.css">
+    <title>Tushar's Billing Website</title>
+</head>
+
+<body>
+    <div id="bill-header">
+        <h1>Bills Maker</h1>
+        <p>by Tushar</p>
+    </div>
+    <main>
+        <!-- input -->
+        <div id="adder">
+            <div id="input">
+                <h2>Add item here: -</h2>
+                <div class="item-card">
+                    <label for="item">Item</label>
+                    <select name="item" id="item">
+
+            <option value="">Select Item</option>
+            <option value="Rasgulla">Rasgulla</option>
+            <option value="Gulabjamun">Gulabjamun</option>
+            <option value="Cham Cham">Cham Cham</option>
+            <option value="Patisa">Patisa</option>
+            <option value="Kalakand">Kalakand</option>
+            <option value="Samosa">Samosa</option>
+            <option value="Burger">Burger</option>
+            <option value="Bread Pakoda">Bread Pakoda</option>
+            </select>
+                </div>
+                <div class="item-card">
+                    <label for="price">Price</label>
+                    <input type="number" id="price">
+                </div>
+                <div class="item-card">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty">
+                </div>
+                <div class="item-card">
+                    <button id="add-item">Add Item</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- output -->
+        <div class="bills" id="billCollection">
+            <div id="output">
+                <div class="billcard" id="billcardId">
+                    <h2>Final Bill</h2>
+                    <table id="bill">
+                        <thead>
+                            <th id="final-item">Item</th>
+                            <th id="final-qty">Qty</th>
+                            <th id="final-price">Price</th>
+                            <th id="final-amount">Amount</th>
+                            <th> Edit </th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                            <td id="total" colspan="3">Total Amount</td>
+                            <td id="totalAmt">₹ 00.00</td>
+                            <td></td>
+                        </tfoot>
+                    </table>
+                </div>
+                <button id="downloadBill">Download Bill</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="billing.js"></script>
+</body>
+
+</html>
