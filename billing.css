@@ -89,7 +89,7 @@ main {
     align-items: flex-start;
     height: fit-content;
     width: 70%;
-    gap: 5px;
+    gap: 0px;
     margin: auto;
     background-color: white;
     border-radius: 25px;
@@ -132,6 +132,7 @@ main {
 #adder {
     width: 50%;
     padding: 30px;
+    /* border-right: 1px solid black; */
 }
 
 #input {
@@ -161,11 +162,13 @@ input {
     width: 70%;
     border: 0;
     border-bottom: 1px solid black;
+    background-color: white;
 }
 
 input[type="number"]:focus,
 select:focus {
     outline: none;
+    background-color: white;
 }
 
 .item-card button {
@@ -176,6 +179,7 @@ select:focus {
     padding: 7px 0px;
     border-radius: 500px;
     margin-top: 20px;
+    border: 0;
 }
 
 
@@ -184,7 +188,7 @@ select:focus {
 @media only screen and (max-width: 880px) {
     #adder {
         width: 100%;
-        padding: 15px;
+        padding: 20px 15px;
         background-color: white;
     }
     #input {
@@ -226,10 +230,12 @@ select:focus {
 
 #output {
     width: 100%;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #billcardId {
@@ -287,7 +293,7 @@ thead th {
 #downloadBill {
     font-size: 17px;
     width: fit-content;
-    margin: auto;
+    margin: 10px auto;
     background-color: #06bb7e;
     color: white;
     border: 0;
@@ -311,15 +317,19 @@ thead th {
 @media only screen and (max-width: 880px) {
     .bills {
         width: 100%;
-        padding-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-left: 0;
         background-color: white;
     }
+    #output {
+        min-height: fit-content;
+    }
     #billcardId {
-        padding: 10px;
+        padding: 6px;
     }
     #billcardId h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
     #bill {
         width: 99%;
@@ -333,7 +343,8 @@ thead th {
         font-size: 14px;
     }
     #downloadBill {
-        font-size: 13px;
+        font-size: 15px;
         padding: 7px 15px;
+        margin-top: 10px;
     }
 }

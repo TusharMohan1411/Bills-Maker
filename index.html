@@ -22,33 +22,34 @@
                 <div class="item-card">
                     <label for="item">Item</label>
                     <select name="item" id="item">
-            <option value="">Select Item</option>
-            <option value="Rasgulla">Rasgulla</option>
-            <option value="Gulabjamun">Gulabjamun</option>
-            <option value="Cham Cham">Cham Cham</option>
-            <option value="Patisa">Patisa</option>
-            <option value="Kalakand">Kalakand</option>
-            <option value="Samosa">Samosa</option>
-            <option value="Burger">Burger</option>
-            <option value="Bread Pakoda">Bread Pakoda</option>
+            <option class="itemOption" value="">Select Item</option>
+            <option class="itemOption" value="Rasgulla">Rasgulla</option>
+            <option class="itemOption" value="Gulabjamun">Gulabjamun</option>
+            <option class="itemOption" value="Cham Cham">Cham Cham</option>
+            <option class="itemOption" value="Patisa">Patisa</option>
+            <option class="itemOption" value="Kalakand">Kalakand</option>
+            <option class="itemOption" value="Samosa">Samosa</option>
+            <option class="itemOption" value="Burger">Burger</option>
+            <option class="itemOption" value="Bread Pakoda">Bread Pakoda</option>
             </select>
                 </div>
                 <div class="item-card">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty">
+                </div>
+
+                <div class="item-card">
                     <label for="au">A/U</label>
-                    <select name="item" id="item">
-            <option value="">Select A/U</option>
-            <option value="kg">Kg</option>
-            <option value="gm">Gm</option>
-            <option value="No">No</option>
+                    <select name="item" id="au">
+            <option class="allAU" value="">Select A/U</option>
+            <option class="allAU" value="Kg">Kg</option>
+            <option class="allAU" value="gm">Gm</option>
+            <option class="allAU" value="No">No</option>
             </select>
                 </div>
                 <div class="item-card">
                     <label for="price">Price</label>
                     <input type="number" id="price">
-                </div>
-                <div class="item-card">
-                    <label for="qty">Quantity</label>
-                    <input type="number" id="qty">
                 </div>
                 <div class="item-card">
                     <button id="add-item">Add Item</button>
@@ -66,13 +67,14 @@
                             <th id="final-item">Item</th>
                             <th id="final-qty">Qty</th>
                             <th id="final-price">Price</th>
+                            <th id="auu">A/U</th>
                             <th id="final-amount">Amount</th>
                             <th> Edit </th>
                         </thead>
                         <tbody>
                         </tbody>
                         <tfoot>
-                            <td id="total" colspan="3">Total Amount</td>
+                            <td id="total" colspan="4">Total Amount</td>
                             <td id="totalAmt">₹ 00.00</td>
                             <td></td>
                         </tfoot>
