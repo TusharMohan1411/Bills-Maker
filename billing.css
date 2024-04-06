@@ -356,8 +356,8 @@ thead th {
     th,
     td {
         min-width: fit-content;
-        padding: 10px 7px;
-        font-size: 14px;
+        padding: 10px 2px;
+        font-size: 13px;
     }
     #downloadBill {
         font-size: 15px;
