@@ -102,7 +102,8 @@ main {
 
 @media only screen and (max-width: 1250px) {
     main {
-        width: 98%;
+        width: 96%;
+        gap: 7px;
     }
 }
 
@@ -212,7 +213,7 @@ select:focus {
         margin: auto;
         background-color: #55158a;
         color: white;
-        padding: 5px 0px;
+        padding: 9px 0px;
         border-radius: 500px;
         margin-top: 20px;
     }
@@ -323,10 +324,10 @@ thead th {
         background-color: white;
     }
     #output {
-        min-height: fit-content;
+        min-height: 60px;
     }
     #billcardId {
-        padding: 6px;
+        padding: 0px;
     }
     #billcardId h2 {
         font-size: 25px;
@@ -338,13 +339,13 @@ thead th {
     table,
     th,
     td {
-        padding: 10px 4px;
-        margin: 2px;
+        min-width: fit-content;
+        padding: 10px 7px;
         font-size: 14px;
     }
     #downloadBill {
         font-size: 15px;
-        padding: 7px 15px;
+        padding: 9px 15px;
         margin-top: 10px;
     }
 }
